@@ -5,6 +5,10 @@
 #include <climits>
 #include <stdio.h>
 #include <cstring>
+#include <ctime>
+#include <chrono>
+using std::chrono::high_resolution_clock;
+using std::chrono::milliseconds;
 using namespace std;
 using namespace std::string_literals;
 bool same(const bool a, const bool b) {
@@ -838,6 +842,18 @@ public:
         }
         return res;
     }
+    static BigInteger factorial(int i){
+        if(i==1||i==0){
+            return BigInteger(1);
+        }else{
+            BigInteger tmp(1);
+            for(int j = 1;j<i;j++){
+                tmp *= j;
+            }
+            return tmp;
+        }
+
+    }
 
 
 };
@@ -861,7 +877,13 @@ string getFibo(long long int p) {
     }
 }
 int main() {
-    cout<<BigInteger::pow(999,99).value<<endl;
-    cout<<BigInteger::pow(999,99).value.length();
+    high_resolution_clock::time_point beginTime = high_resolution_clock::now();
+    for(int i = 0;i < 10;i++){
+//        cout<<BigInteger::factorial(1000).value;
+        cout<<getFibo(10000)<<endl;
+    }
+    high_resolution_clock::time_point endTime = high_resolution_clock::now();
+    milliseconds timeInterval = std::chrono::duration_cast<milliseconds>(endTime - beginTime);
+    cout << "\nRunning Time " << timeInterval.count()  << "ms" << endl;
     return 0;
 }
