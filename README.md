@@ -2,7 +2,8 @@ let's start
 ===
 备注:  
 本项目作为共享项目，但本身已经停止更新与优化。  
-请转向: https://github.com/Basicconstruction/BigIntegerUseVector
+请转向: https://github.com/Basicconstruction/BigIntegerUseVector  
+
 声明一个对象并初始化
 --
 ```cpp
@@ -80,7 +81,7 @@ gun mingw
 Amd Ryzen 7 4000  
 microsoft window 11  
 
-本项目的测试速度标识为 **string**  
+本项目的测试速度标识为 **string**,标识为vector的项目在文档开始的链接里面 
 --
 
 |aspect|string|python|vector|java|julia|
