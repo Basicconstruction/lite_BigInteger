@@ -4,6 +4,10 @@ let's start
 本项目作为共享项目，但本身已经停止更新与优化。  
 请转向: https://github.com/Basicconstruction/BigIntegerUseVector  
 
+以下是简要从`https://github.com/Basicconstruction/BigIntegerUseVector`
+拷贝而来，作为简要介绍，有些操作已经不太一样，有些操作的结果可能会显得诡异。
+这或许是因为add等函数设置为了返回BigInteger&.
+
 声明一个对象并初始化
 --
 ```cpp
