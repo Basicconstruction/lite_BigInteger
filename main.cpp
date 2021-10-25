@@ -13,12 +13,8 @@ using std::chrono::milliseconds;
 using namespace std;
 using namespace std::string_literals;
 
-bool same(const bool a, const bool b) {
-    if ((a && b) || ((!a) && (!b))) {
-        return true;
-    } else {
-        return false;
-    }
+bool same(const bool& a, const bool& b) {
+    return a == b;
 }
 
 size_t convertCharToInt(const char c) {
